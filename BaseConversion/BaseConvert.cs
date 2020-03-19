@@ -31,7 +31,7 @@ namespace BaseConversion
             for (char i = 'A'; i <= 'Z'; i++) {
                 if (!toConvert.Contains((char)(i + 32))) continue; 
 
-                toConvert = toConvert.Replace(i, (char) (i + 32));      //Set literals to it's lower equivalents (A -> a, B -> b....)
+                toConvert = toConvert.Replace(i, (char)(i + 32));      //Set literals to it's lower equivalents (A -> a, B -> b....)
 
                 int currentStand = i - 55;
                 if(toBase <= currentStand) 
