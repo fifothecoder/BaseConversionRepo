@@ -35,7 +35,7 @@ namespace BaseConversion
 
                 int currentStand = i - 55;
                 if(toBase <= currentStand) 
-                    throw new ArgumentException("Input string contained out-of-base characters!");   //String contains stand-off characters that don't suit the base (eg. there is no G in hexadecimal base)
+                    throw new ArgumentException("Input string contained out-of-base characters!");   //String contains stand-off characters that don't suit the base (eg. there is no g in hexadecimal base)
             }
 
             //Conversion
@@ -43,7 +43,7 @@ namespace BaseConversion
             int curBase = 1;
             int result = 0;
             foreach (var c in toConvert) {
-                var value = Unvalidate(c);
+                var value = Devalidate(c);
                 result += value * curBase;
                 curBase *= toBase;
             }
@@ -58,7 +58,7 @@ namespace BaseConversion
             throw new ArgumentException("Current number is out of valid scope!");
         }
 
-        private static int Unvalidate(char c) {
+        private static int Devalidate(char c) {
             if (c >= '0' && c <= '9') return (c - 48);
             if (c >= 'a' && c <= 'z') return (c - 87);
             throw new ArgumentException("Current number is out of valid scope!");
