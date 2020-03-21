@@ -9,6 +9,11 @@ namespace BaseConversion
     class Program
     {
         static void Main(string[] args) {
+
+            //Author : Fifo
+            //Last commit : 21. March 2020
+
+
             Console.Write("Write a number to convert : ");
             string input = Console.ReadLine();
 
